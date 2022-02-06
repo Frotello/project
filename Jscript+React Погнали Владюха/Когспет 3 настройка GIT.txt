@@ -1,0 +1,20 @@
+git init - инициализировать папку с проектов в Git
+git config --global user.name "Frotello"
+git config --global user.email vlad.frotello@gmail.com
+git status
+git add -A или git add name.doc 
+
+git commit -a -m"first comit"
+
+git log 
+
+git remote add origin https://github.com/Frotello/project.git
+git branch -M main
+git push -u origin main
+
+git push - посласть все на заранее обозначенный репозиторий
+
+git pull - перенести прогрес с виртуального репозитория на рабочие место
+
+https://githowto.com/ru - пройти туториал
+https://www.gitkraken.com/ - поставить прогу для работы с репозиториями Git
