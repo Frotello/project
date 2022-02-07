@@ -7,12 +7,17 @@ let personalAnimeDB = {
     genres: [],
     privat: false
 };
-let  a = prompt("Одно из последних просмотренных аниме?", ''),
-     b = prompt("На сколько его оцениваете?", ''),
-     c = prompt("Одно из последних просмотренных аниме?", ''),
-     d = prompt("На сколько его оцениваете?", '');
 
-personalAnimeDB.anime[a] = b;
-personalAnimeDB.anime[c] = d;
+let i = 0;
 
+while (i != 2){
+    let  a = prompt("Одно из последних просмотренных аниме?", '');
+    if (a == null || a.length == 0 || a.length >= 50){
+        --i;
+        continue;
+    }
+    let b = prompt("На сколько его оцениваете?", '');
+    personalAnimeDB.anime[a] = b;
+    i++; 
+}
 console.log(personalAnimeDB);
