@@ -8,16 +8,26 @@ let personalAnimeDB = {
     privat: false
 };
 
-let i = 0;
+for (let i = 0; i < 2; i++){
+    const  a = prompt("Одно из последних просмотренных аниме?", ''),
+           b = prompt("На сколько его оцениваете?", '');
 
-while (i != 2){
-    let  a = prompt("Одно из последних просмотренных аниме?", '');
-    if (a == null || a.length == 0 || a.length >= 50){
-        --i;
-        continue;
+    if(a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalAnimeDB.anime[a] = b;
+    } else {
+        console.log('eror');
+        i--;
     }
-    let b = prompt("На сколько его оцениваете?", '');
-    personalAnimeDB.anime[a] = b;
-    i++; 
+
 }
+if (personalAnimeDB.count < 10){
+    console.log('Просмотрено двольно мало аниме');
+} else if (personalAnimeDB.count >= 10 && personalAnimeDB.count < 30){
+    console.log('Вы класный зритель');
+} else if (personalAnimeDB.count >= 30){
+    console.log('Да вы дядушка, аниме МЕН');
+} else {
+    console.log('Произошла ошибка');
+}
+
 console.log(personalAnimeDB);
