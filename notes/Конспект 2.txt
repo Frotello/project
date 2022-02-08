@@ -19,13 +19,13 @@ alert(`Что-то, число, ${ранее созданая переменная}`)
 
 Switch - оператор для строгой проверки условий
 switch (name){
-    case 56:
+    cause 56:
 	comand;
 	break;
-    case 57:
+    cause 57:
 	comand;
 	break;
-    case 58:
+    cause 58:
 	comand;
 	break;
     default:
