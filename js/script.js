@@ -29,5 +29,6 @@ if (personalAnimeDB.count < 10){
 } else {
     console.log('Произошла ошибка');
 }
-
+// Добавили комент для теста работы удаленого репозитория.
+console.log('lol');
 console.log(personalAnimeDB);
