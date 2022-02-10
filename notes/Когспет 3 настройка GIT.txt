@@ -4,7 +4,7 @@ git config --global user.email vlad.frotello@gmail.com
 git status
 git add -A или git add name.doc 
 
-git commit -a -m"first comit"
+git commit -m "first comit"
 
 git log 
 
