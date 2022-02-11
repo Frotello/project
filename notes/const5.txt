@@ -10,3 +10,6 @@ function name(argumensts){
     name(argument);
 
 Замыкание функции это обращение функции к глобальным переменным.
+
+Стрелочные функции
+const/let name = (a, b) => a + b;
