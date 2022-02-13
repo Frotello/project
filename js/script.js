@@ -2,12 +2,11 @@
 
 let numberOFAnime;
 function start() {
-    numberOFAnime = prompt("Сколько аниме вы уже просмотрели?",'');
-    while (numberOFAnime =='' || numberOFAnime == null || numberOFAnime == isNaN(numberOFAnime)){
-        numberOFAnime = prompt("Сколько аниме вы уже просмотрели?",'');
+    numberOFAnime = +prompt("Сколько аниме вы уже просмотрели?",'');
+    while (numberOFAnime == '' || numberOFAnime == null || isNaN(numberOFAnime)){
+        numberOFAnime = +prompt("Сколько аниме вы уже просмотрели?",'');
     }
 }
-
 start();
 
 let personalAnimeDB = {
@@ -46,7 +45,24 @@ function detectPersonalLevel() {
     }
 }
 
-rememberMyAnime();
+detectPersonalLevel();
 
-console.log(personalAnimeDB);
-console.log(rememberMyAnime);
+function showMyDB(){
+    if (personalAnimeDB.privat == false){
+        console.log(personalAnimeDB);
+    }
+    
+}
+
+showMyDB(personalAnimeDB.privat);
+
+writeYourGenres();
+function writeYourGenres () {
+     for (let i = 1; i <= 3; i++){
+         const genre = prompt('Ва шюбимы жанр под номером ' + i + '?' , '');
+         personalAnimeDB.genres[i-1] = genre;
+     }
+}
+
+
+console.log(personalAnimeDB.genres);
